@@ -1,3 +1,68 @@
+
+function highlight(el){
+   //el.style.backgroundColor='blue';
+   if(el.style.backgroundColor == 'white'){//whote turn to yellow
+    el.style.backgroundColor='yellow';
+
+    } else{//turn to white
+        el.style.backgroundColor='white';
+
+    }
+}
+
+
+function myAlert(){
+    alert("i'm clicked!");
+}
+
+function hightlightActor(actor){
+    let spans = document.querySelectorAll("#play span");
+    for(const mySpan of spans){
+       
+       
+        if(actor ==mySpan.dataset.actor){//turn to yellow
+            mySpan.style.backgroundColor='yellow';
+
+            } else{//turn to white
+                mySpan.style.backgroundColor='white';
+
+
+            }
+
+    }
+   // alert(actor);
+}
+
+
+let spans = document.querySelectorAll("#play span");
+ 
+console.log(spans);
+
+for(const mySpan of spans){
+    mySpan.addEventListener("click",function(){
+        hightlightActor(mySpan.dataset.actor);
+        
+        
+        });
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //https://tinyurl.com/dynamic-html-checker
 document.getElementById("html-checker").setAttribute("href","https://validator.w3.org/nu/?doc=" + location.href);
     
